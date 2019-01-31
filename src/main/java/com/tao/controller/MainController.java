@@ -3,8 +3,6 @@ package com.tao.controller;
 
 import com.tao.pojo.entity.Student;
 import com.tao.pojo.sys.Message;
-import com.tao.service.SystemTaskService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,9 +13,6 @@ import java.util.List;
 
 @RestController
 class MainController {
-    @Autowired
-    private SystemTaskService systemTaskService;
-
     @RequestMapping("/index")
     public String index(){
         return "hello";

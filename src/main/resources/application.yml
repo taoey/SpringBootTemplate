@@ -11,17 +11,3 @@ spring:
   mvc:
     view:
       suffix: .json
-  datasource:
-    name: datasource
-    url: jdbc:mysql://123.207.155.241:3306/test_quartz_task?useUnicode=true&amp;amp;characterEncoding=utf8
-    username: tao
-    password: tao123321.
-    driverClassName: com.mysql.jdbc.Driver
-    max-active: 2
-    max-idle: 2
-    min-idle: 2
-    initial-size: 2
-
-mybatis:
-  mapperLocations: classpath:mapper/**/*.xml
-  typeAliasesPackage: com.tao.pojo
