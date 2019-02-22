@@ -11,6 +11,7 @@ spring:
   mvc:
     view:
       suffix: .json
+  #数据持久化
   datasource:
     name: datasource
     url: jdbc:mysql://123.207.155.241:3306/test_quartz_task?useUnicode=true&amp;amp;characterEncoding=utf8
