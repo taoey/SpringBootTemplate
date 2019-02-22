@@ -11,3 +11,18 @@ spring:
   mvc:
     view:
       suffix: .json
+
+#  #数据持久化，需要填写自己的数据库相关信息
+#  datasource:
+#    name: datasource
+#    url: jdbc:mysql://***/***?useUnicode=true&amp;amp;characterEncoding=utf8
+#    username:
+#    password:
+#    driverClassName: com.mysql.jdbc.Driver
+#    max-active: 2
+#    max-idle: 2
+#    min-idle: 2
+#    initial-size: 2
+#
+#mybatis:
+#  mapperLocations: classpath:mapper/**/*.xml
