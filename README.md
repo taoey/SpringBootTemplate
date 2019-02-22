@@ -1,2 +1,1 @@
-# JenkinsTes
-Jenkins测试项目
+README
