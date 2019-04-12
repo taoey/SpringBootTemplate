@@ -1,4 +1,4 @@
-package com.tao.controller;
+package com.tao.modules.test;
 
 
 import com.tao.pojo.entity.Student;
@@ -12,13 +12,14 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@RequestMapping("test")
 class MainController {
     @RequestMapping("/index")
     public String index(){
         return "hello";
     }
 
-    @GetMapping("/studentInfo.json")
+    @GetMapping("/student_list")
     public Message getStudentInfo(){
         List<Student> stus = new ArrayList<>();
         stus.add(new Student("tao",12,new Date()));
@@ -27,5 +28,15 @@ class MainController {
         return  new Message(Message.STATUS_OK).setResult(stus);
     }
 
+    @GetMapping(value = "/zero")
+    public String zeroException(){
+        return (1/0)+"";
+    }
+
+    @GetMapping("/filter_exception")
+    public Message filterException(){
+        System.out.println("进入了过滤器测试程序");
+        return null;
+    }
 
 }
