@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-public class Myconfig {
+public class MyFastJsonConfig {
     @Bean
     public HttpMessageConverters fastJsonConfig(){
         FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();

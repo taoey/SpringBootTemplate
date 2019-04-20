@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 @ControllerAdvice
-public class DefaultExceptionHandler {
+public class MyExceptionHandler {
 
     //如果不配置@ResponseBody，仍然是返回某个页面
     @ResponseBody

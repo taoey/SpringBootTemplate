@@ -25,7 +25,7 @@ class MainController {
         stus.add(new Student("tao",12,new Date()));
         stus.add(new Student("黄为涛",20,new Date()));
         stus.add(new Student("黄为涛",20,new Date()));
-        return  new Message(Message.STATUS_OK).setResult(stus);
+        return new Message(Message.STATUS_OK).setResult(stus);
     }
 
     @GetMapping(value = "/zero")

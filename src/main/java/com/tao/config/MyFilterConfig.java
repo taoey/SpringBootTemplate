@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.Filter;
 
 @Configuration
-public class FilterConfig {
+public class MyFilterConfig {
 
     @Bean
     public Filter testFilter() {

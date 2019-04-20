@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 
 @Configuration
-public class UrlMatchConfig extends WebMvcConfigurationSupport {
+public class MyUrlMatchConfig extends WebMvcConfigurationSupport {
     @Override
     public void configurePathMatch(PathMatchConfigurer configurer) {
         //setUseSuffixPatternMatch 后缀模式匹配
