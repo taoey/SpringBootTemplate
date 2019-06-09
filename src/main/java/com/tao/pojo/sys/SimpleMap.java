@@ -1,5 +1,8 @@
 package com.tao.pojo.sys;
 
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.beanutils.BeanUtils;
+
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
@@ -11,6 +14,8 @@ import java.util.HashMap;
 public class SimpleMap extends HashMap<String, Object> implements Serializable {
 
     private static final long serialVersionUID = -5809782578272943999L;
+    private static final int MAX_PAGE_SIZE = 200;
+    private static final int MIN_PAGE_SIZE = 10;
 
     public Integer getInteger(String key) {
         if(containsKey(key)) {
@@ -102,16 +107,29 @@ public class SimpleMap extends HashMap<String, Object> implements Serializable {
     }
 
     public Integer getPageSize() {
-        Object value = get("rows");
+        Object value = get("pageSize");
         if(value == null) {
-            return 15;
+            return MIN_PAGE_SIZE;
         }
         Integer size = Integer.parseInt(value.toString());
-        if(size > 200) {
-            return 200;
+        if(size > MAX_PAGE_SIZE) {
+            return MAX_PAGE_SIZE;
         }else{
             return size;
         }
     }
+    public Object toBean(Class<?> clazz){
+        try {
+            Object obj = clazz.newInstance();
+            BeanUtils.populate(obj,this);
+            return obj;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
+    public JSONObject toJson(){
+        return JSONObject.parseObject(JSONObject.toJSONString(this));
+    }
 }
