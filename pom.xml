@@ -83,6 +83,12 @@
             <artifactId>guava</artifactId>
             <version>24.1-jre</version>
         </dependency>
+        <!--加密相关-->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.10</version>
+        </dependency>
     </dependencies>
 
 
