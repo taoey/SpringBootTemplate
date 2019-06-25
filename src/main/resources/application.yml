@@ -15,7 +15,7 @@ spring:
   #数据持久化，需要填写自己的数据库相关信息 ，并在App.java中开启@MapperScan注解
   datasource:
     name: datasource
-    url: jdbc:mysql://192.168.128.134/sql_test?useUnicode=true&amp;amp;characterEncoding=utf8
+    url: jdbc:mysql://192.168.128.134/jbill?useUnicode=true&amp;amp;characterEncoding=utf8
     username: root
     password: 123456
     driverClassName: com.mysql.jdbc.Driver
