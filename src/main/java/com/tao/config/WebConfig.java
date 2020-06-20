@@ -17,4 +17,10 @@ public class WebConfig implements WebMvcConfigurer {
         //第一个方法设置访问路径前缀，第二个方法设置资源路径  例如 http://127.0.0.1:8900/static/1.jpg
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        //主页配置
+        registry.addViewController("/").setViewName("forward:/static/index.html");
+    }
 }
