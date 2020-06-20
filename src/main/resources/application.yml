@@ -11,7 +11,7 @@ spring:
   mvc:
     view:
       prefix: classpath:resources/
-#    static-path-pattern: /static/**
+    static-path-pattern: /static/**
   resources:
     static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources
   #数据持久化，需要填写自己的数据库相关信息 ，并在App.java中开启@MapperScan注解
