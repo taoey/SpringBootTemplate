@@ -1,4 +1,4 @@
-package com.tao.modules.common;
+package com.tao.modules.utils;
 
 
 import com.thoughtworks.xstream.core.util.Base64Encoder;
